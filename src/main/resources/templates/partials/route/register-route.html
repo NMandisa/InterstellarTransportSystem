@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Interstellar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/angular/angular-route.min.js"></script>
+    <script src="js/angular/angular-ui-router.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body >
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-8">
+            <div class="alert alert-danger" ng-show="registeredRouteError">
+                <strong>Sorry!</strong> route hasn't been registered
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-8">
+            <div class="alert alert-info" ng-show="registeredRouteSuccess">
+                <strong>Registered!</strong> route has been successfully
+            </div>
+        </div>
+    </div>
+    <h1>Create Route <span></span></h1>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-8">
+            <label>Route ID :</label>
+            <input class="form-control input-lg" ng-model="saveRouteId" placeholder="Route Id"/>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="form-group">
+                <label>Planet Origin:</label>
+                <input class="form-control input-lg" ng-model="savePlanetOrigin" placeholder="Planet Origin"/>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="form-group">
+                <label>Planet Destination:</label>
+                <input class="form-control input-lg" ng-model="savePlanetDestination" placeholder="Planet Destination"/>
+
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-8 col-md-8">
+            <label>Distance :</label>
+            <input class="form-control input-lg" ng-model="saveDistance" placeholder="Distance"/>
+        </div>
+
+        <div class="col-xs-12 col-sm-8 col-md-8">
+            <br/>
+            <input type="button" class="btn btn-success btn-block btn-lg" ng-click="saveRoute()"
+                   value="Register Route"/>
+        </div>
+
+        <div ui-view></div>
+
+    </div>
+</div>
+
+
+</body>
+</html>

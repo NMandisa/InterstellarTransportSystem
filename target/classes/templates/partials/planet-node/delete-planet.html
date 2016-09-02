@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Interstellar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/angular/angular-ui-router.min.js"></script>
+    <script src="js/angular/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-8">
+            <div class="alert alert-danger" ng-show="deletePlanetError">
+                <strong>Sorry!</strong> route hasn't been deleted
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-8">
+            <div class="alert alert-info" ng-show="deletePlanetSuccess">
+                <strong>Delete!</strong> route has been deleted
+            </div>
+        </div>
+    </div>
+
+
+
+    <h1>DELETE Planet<span></span></h1>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-8" ng-init="">
+            <label>Distance :</label>
+            <select class="form-control input-lg" ng-model="ddlPlanetId" ng-change="findPlanet()">
+                <option ng-value="1">1</option>
+                <option ng-value="2">2</option>
+                <option ng-value="3">3</option>
+                <option ng-value="4">4</option>
+                <option ng-value="5">5</option>
+                <option ng-value="6">6</option>
+                <option ng-value="7">7</option>
+                <option ng-value="8">8</option>
+                <option ng-value="9">9</option>
+                <option ng-value="10">10</option>
+                <option ng-value="11">11</option>
+                <option ng-value="12">12</option>
+                <option ng-value="13">13</option>
+                <option ng-value="14">14</option>
+                <option ng-value="15">15</option>
+                <option ng-value="16">16</option>
+                <option ng-value="17">17</option>
+                <option ng-value="18">18</option>
+                <option ng-value="19">19</option>
+                <option ng-value="20">20</option>
+                <option ng-value="21">21</option>
+                <option ng-value="22">22</option>
+                <option ng-value="23">23</option>
+                <option ng-value="24">24</option>
+                <option ng-value="25">25</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="form-group">
+                <label>Planet Origin:</label>
+                <input class="form-control input-lg" placeholder="Planet Origin" disabled="true"
+                       value="{{routefound.planetOrigin}}"/>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="form-group">
+                <label>Planet Destination:</label>
+                <input class="form-control input-lg" disabled="true" value="{{routefound.planetDestination}}"
+                       placeholder="Planet Destination"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-8">
+            <br/>
+            <input type="button" class="btn btn-primary btn-block btn-lg" ng-click="deletePlanetNode()"
+                   value="Delete Planet"/>
+        </div>
+    </div>
+    <div ui-view></div>
+
+</div>
+</div>
+</div>
+
+
+</body>
+</html>

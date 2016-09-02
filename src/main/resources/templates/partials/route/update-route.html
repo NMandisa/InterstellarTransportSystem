@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Interstellar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/angular/angular-ui-router.min.js"></script>
+    <script src="js/angular/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="alert alert-info col-xs-12 col-sm-8 col-md-8" ng-show="updateRouteError">
+            <strong>Sorry!</strong> unable to create route
+        </div>
+    </div>
+    <div class="row">
+        <div class="alert alert-danger col-xs-12 col-sm-8 col-md-8" ng-show="updateRouteSuccess">
+            <strong>Success Registered!</strong> Route
+        </div>
+    </div>
+    <h1>UPDATE Route <span></span></h1>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-8" ng-init="">
+            <label>Distance :</label>
+            <select class="form-control input-lg" ng-model="ddlRouteId" ng-change="findRoute()">
+                <option ng-value="1">1</option>
+                <option ng-value="2">2</option>
+                <option ng-value="3">3</option>
+                <option ng-value="4">4</option>
+                <option ng-value="5">5</option>
+                <option ng-value="6">6</option>
+                <option ng-value="7">7</option>
+                <option ng-value="8">8</option>
+                <option ng-value="9">9</option>
+                <option ng-value="10">10</option>
+                <option ng-value="11">11</option>
+                <option ng-value="12">12</option>
+                <option ng-value="13">13</option>
+                <option ng-value="14">14</option>
+                <option ng-value="15">15</option>
+                <option ng-value="16">16</option>
+                <option ng-value="17">17</option>
+                <option ng-value="18">18</option>
+                <option ng-value="19">19</option>
+                <option ng-value="20">20</option>
+                <option ng-value="21">21</option>
+                <option ng-value="22">22</option>
+                <option ng-value="23">23</option>
+                <option ng-value="24">24</option>
+                <option ng-value="25">25</option>
+                <option ng-value="26">26</option>
+                <option ng-value="27">27</option>
+                <option ng-value="28">28</option>
+                <option ng-value="29">29</option>
+                <option ng-value="30">30</option>
+                <option ng-value="31">31</option>
+                <option ng-value="32">32</option>
+                <option ng-value="33">33</option>
+                <option ng-value="34">34</option>
+                <option ng-value="35">35</option>
+                <option ng-value="36">36</option>
+                <option ng-value="37">37</option>
+                <option ng-value="38">38</option>
+                <option ng-value="39">39</option>
+                <option ng-value="40">40</option>
+                <option ng-value="41">41</option>
+                <option ng-value="42">42</option>
+                <option ng-value="43">43</option>
+                <option ng-value="44">44</option>
+                <option ng-value="45">45</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="form-group">
+                <label>Planet Origin:</label>
+                <input class="form-control input-lg" ng-model="updatePlanetOrigin" placeholder="Planet Origin"/>
+                <label disabled="true">{{routefound.planetOrigin}}</label>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="form-group">
+                <label>Planet Destination:</label>
+                <input class="form-control input-lg" ng-model="updatePlanetDestination"
+                       placeholder="Planet Destination"/>
+                <label disabled="true">{{routefound.planetDestination}}</label>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-8">
+            <label>Distance :</label>
+            <input class="form-control input-lg" ng-model="" ng-value="{{routefound.distance}}" placeholder="Distance"/>
+            <label disabled="true">{{routefound.distance}}</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-8">
+            <br/>
+            <input type="button" class="btn btn-success btn-block btn-lg" ng-click="updateRoute()"
+                   value="Update Route"/>
+        </div>
+    </div>
+    <div ui-view></div>
+
+</div>
+</div>
+</div>
+
+
+</body>
+</html>

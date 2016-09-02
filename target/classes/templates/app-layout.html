@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Interstellar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap/bootstrap.min.css"/>
+    <link href="css/bootstrap/bootstrap-combined.min.css" rel="stylesheet">
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/angular/angular-route.min.js"></script>
+    <script src="js/angular/angular-ui-router.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+<head>
+    <title>INTERSTELLAR TRANSPORT SYSTEM</title>
+</head>
+<body ng-app="app">
+<div class="container">
+    <div class="row">
+        <div>
+            <h1>INTERSTELLAR TRANSPORT SYSTEM</h1>
+        </div>
+        <div class="navbar navbar-inverse">
+            <div class='navbar-inner nav-collapse' style="height: auto;">
+                <ul class="nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#/path">Shortest Path</a></li>
+                    <li><a href="#">Page Two</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id='content' class='row-fluid'>
+            <div class='span2 sidebar'>
+                <h3>Route CRUD</h3>
+                <ul class="nav nav-tabs nav-stacked">
+                    <li><a href='#/createRoute'>Create Route</a></li>
+                    <li><a href='#/updateRoute'>Update Route</a></li>
+                    <li><a href='#/deleteRoute'>Delete Route</a></li>
+                </ul>
+            </div>
+            <div class='span8 main' ui-view>
+                <h2>Main Content Section</h2>
+            </div>
+            <div class='span2 sidebar'>
+                <h3>Planet CRUD</h3>
+                <ul class="nav nav-tabs nav-stacked">
+                    <li><a href='#/createPlanet'>Create Planet Node</a></li>
+                    <li><a href='#/updatePlanet'>Update Planet Node</a></li>
+                    <li><a href='#/deletePlanet'>Delete Planet Node</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</body>
+</html>

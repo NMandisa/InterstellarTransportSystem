@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Interstellar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/angular/angular-ui-router.min.js"></script>
+    <script src="js/angular/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-8">
+            <div class="alert alert-danger" ng-show="deleteRouteError">
+                <strong>Sorry!</strong> route hasn't been deleted
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-8">
+            <div class="alert alert-info" ng-show="deleteRouteSuccess">
+                <strong>Delete!</strong> route has been deleted
+            </div>
+        </div>
+    </div>
+
+
+
+    <h1>REGISTER Planet<span></span></h1>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="form-group">
+                <label>Planet Origin:</label>
+                <input class="form-control input-lg" placeholder="Planet Node" disabled="true"
+                       value="{{routefound.planetNode}}"/>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="form-group">
+                <label>Planet Destination:</label>
+                <input class="form-control input-lg" value="{{routefound.planetName}}"
+                       placeholder="Planet Name"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-8">
+            <br/>
+            <input type="button" class="btn btn-primary btn-block btn-lg" ng-click="savePlanetNode()"
+                   value="Delete Planet"/>
+        </div>
+    </div>
+    <div ui-view></div>
+
+</div>
+
+
+
+</body>
+</html>

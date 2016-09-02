@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Aug 22 17:00:56 CAT 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0156-b2c4-c8b5-00000c520070 
+on database directory C:\dbInterstellar with class loader sun.misc.Launcher$AppClassLoader@5fd0d5ae 
+Loaded from file:/C:/Users/RSS/.m2/repository/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_92-b14
+user.dir=C:\Users\RSS\IdeaProjects\Discovery
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
